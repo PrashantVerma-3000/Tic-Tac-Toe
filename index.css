@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  height: 4vmin;
+  width: 100vw;
+  background-color: rebeccapurple;
+}
+main {
+  position: relative;
+  display: flex;
+}
+.game {
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+  background-color: aqua;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info {
+  position: relative;
+  display: inline-block;
+  height: 100vh;
+  background-color: antiquewhite;
+  width: 30%;
+}
+.inbox {
+  position: absolute;
+  left: 30%;
+  top: 12%;
+  /* display: grid; */
+  height: 28vw;
+  width: 28vw;
+  /* border: solid black 5px; */
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.33%;
+  width: 33.33%;
+  border: solid black 2px;
+  font-size: 17vmin;
+  font-weight: 100;
+  cursor: pointer;
+}
+#two,
+#five,
+#eight {
+  left: 33.33%;
+}
+#three,
+#six,
+#nine {
+  left: 66.666%;
+}
+#four,
+#five,
+#six {
+  top: 33.33%;
+}
+#seven,
+#eight,
+#nine {
+  top: 66.666%;
+}
+
+button {
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  border-radius: 5px;
+  width: 7%;
+  font-size: 2vmin;
+}
+
+.history {
+  position: absolute;
+  left: 18%;
+  top: 10%;
+  border: solid black 5px;
+  height: 80%;
+  width: 60%;
+}
+.game h1 {
+  position: absolute;
+  left: 41%;
+  top: 2%;
+  font-size: 5vmin;
+}
+p {
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  font-size: 2.5vmin;
+}
+.info h1 {
+  position: absolute;
+  left: 37%;
+  top: 2%;
+  font-size: 5vmin;
+}
+.history {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  position: relative;
+  width: 100%;
+  background-color: palevioletred;
+  height: 8%;
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmin;
+  background-color: green;
+}
+.card:nth-of-type(2n + 1) {
+  background-color: rgb(42, 238, 42);
+}
+.other {
+  position: absolute;
+  width: 100%;
+  background-color: palevioletred;
+  height: 8%;
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200%;
+}
