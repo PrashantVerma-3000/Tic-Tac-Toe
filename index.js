@@ -15,15 +15,13 @@ function fillValue(ele) {
   if (last === 0) {
     ele.innerHTML = "X";
   } else {
-    ele.innerHTML = "Y";
+    ele.innerHTML = "O";
   }
   last = 1 - last;
 }
 
 function check() {
   if (!start) return;
-  if (count === 9) return "over";
-  btn.style.background = "blue";
   if (
     (grid[0].innerHTML === "X" &&
       grid[1].innerHTML === "X" &&
@@ -53,33 +51,34 @@ function check() {
     return "X";
   }
   if (
-    (grid[0].innerHTML === "Y" &&
-      grid[1].innerHTML === "Y" &&
-      grid[2].innerHTML === "Y") ||
-    (grid[3].innerHTML === "Y" &&
-      grid[4].innerHTML === "Y" &&
-      grid[5].innerHTML === "Y") ||
-    (grid[6].innerHTML === "Y" &&
-      grid[7].innerHTML === "Y" &&
-      grid[8].innerHTML === "Y") ||
-    (grid[0].innerHTML === "Y" &&
-      grid[4].innerHTML === "Y" &&
-      grid[8].innerHTML === "Y") ||
-    (grid[2].innerHTML === "Y" &&
-      grid[4].innerHTML === "Y" &&
-      grid[6].innerHTML === "Y") ||
-    (grid[0].innerHTML === "Y" &&
-      grid[3].innerHTML === "Y" &&
-      grid[6].innerHTML === "Y") ||
-    (grid[1].innerHTML === "Y" &&
-      grid[4].innerHTML === "Y" &&
-      grid[7].innerHTML === "Y") ||
-    (grid[2].innerHTML === "Y" &&
-      grid[5].innerHTML === "Y" &&
-      grid[8].innerHTML === "Y")
+    (grid[0].innerHTML === "O" &&
+      grid[1].innerHTML === "O" &&
+      grid[2].innerHTML === "O") ||
+    (grid[3].innerHTML === "O" &&
+      grid[4].innerHTML === "O" &&
+      grid[5].innerHTML === "O") ||
+    (grid[6].innerHTML === "O" &&
+      grid[7].innerHTML === "O" &&
+      grid[8].innerHTML === "O") ||
+    (grid[0].innerHTML === "O" &&
+      grid[4].innerHTML === "O" &&
+      grid[8].innerHTML === "O") ||
+    (grid[2].innerHTML === "O" &&
+      grid[4].innerHTML === "O" &&
+      grid[6].innerHTML === "O") ||
+    (grid[0].innerHTML === "O" &&
+      grid[3].innerHTML === "O" &&
+      grid[6].innerHTML === "O") ||
+    (grid[1].innerHTML === "O" &&
+      grid[4].innerHTML === "O" &&
+      grid[7].innerHTML === "O") ||
+    (grid[2].innerHTML === "O" &&
+      grid[5].innerHTML === "O" &&
+      grid[8].innerHTML === "O")
   ) {
-    return "Y";
+    return "O";
   }
+  if (count === 9) return "over";
   return "NON";
 }
 
@@ -115,13 +114,13 @@ grid.forEach((cell) => {
       Updatehistory("X Winner !!!");
       turn.innerText = "X Wins!!!!!";
       btn.innerText = "Press to Reset";
-    } else if (state === "Y") {
+    } else if (state === "O") {
       start = false;
-      Updatehistory("Y Winner !!!");
-      turn.innerText = "Y Wins!!!!!";
+      Updatehistory("O Winner !!!");
+      turn.innerText = "O Wins!!!!!";
       btn.innerText = "Press to Reset";
     } else if (state === "NON") {
-      turn.innerText = `Turn for ${last === 1 ? "Y" : "X"}`;
+      turn.innerText = `Turn for ${last === 1 ? "O" : "X"}`;
     } else {
       start = false;
       Updatehistory("Draw !!!");
