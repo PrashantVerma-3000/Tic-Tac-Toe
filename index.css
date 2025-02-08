@@ -5,7 +5,7 @@
 nav {
   height: 4vmin;
   width: 100vw;
-  background-color: rebeccapurple;
+  background-color: #868b8e;
 }
 main {
   position: relative;
@@ -15,7 +15,7 @@ main {
   position: relative;
   display: inline-block;
   height: 100vh;
-  background-color: aqua;
+  background-color: #eeede7;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ main {
   position: relative;
   display: inline-block;
   height: 100vh;
-  background-color: antiquewhite;
+  background-color: #b9b7bd;
   width: 30%;
 }
 .inbox {
@@ -88,13 +88,15 @@ button {
   border-radius: 5px;
   width: 7%;
   font-size: 2vmin;
+  background-color: #a6f1e0;
 }
 
 .history {
   position: absolute;
   left: 18%;
   top: 10%;
-  border: solid black 5px;
+  border: solid black 2px;
+  border-radius: 1%;
   height: 80%;
   width: 60%;
 }
@@ -123,26 +125,16 @@ p {
 .card {
   position: relative;
   width: 100%;
-  background-color: palevioletred;
   height: 8%;
   right: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4vmin;
-  background-color: green;
 }
-.card:nth-of-type(2n + 1) {
-  background-color: rgb(42, 238, 42);
+.list li:nth-of-type(2n + 2) .card {
+  background-color: #e7d2cc;
 }
-.other {
-  position: absolute;
-  width: 100%;
-  background-color: palevioletred;
-  height: 8%;
-  right: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 200%;
+.list li:nth-of-type(2n + 1) .card {
+  background-color: #f9f1f0;
 }
